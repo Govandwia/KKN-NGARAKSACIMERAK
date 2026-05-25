@@ -1,0 +1,290 @@
+[
+  {
+    "id": "batumalang",
+    "name": "Batumalang",
+    "members": [
+      {
+        "fullName": "Amalia Safitri",
+        "name": "Amalia",
+        "gender": "Perempuan",
+        "prodi": "Kehutanan",
+        "fakultas": "Kehutanan",
+        "divisi": "Sponsorship",
+        "klaster": "AGRO"
+      },
+      {
+        "fullName": "Amelia Kusuma Putri",
+        "name": "Amel",
+        "gender": "Perempuan",
+        "prodi": "Bahasa dan Sastra Indonesia",
+        "fakultas": "Ilmu Budaya",
+        "divisi": "Kormasit",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Belva Salsabila Anas Putri",
+        "name": "Belva",
+        "gender": "Perempuan",
+        "prodi": "Ilmu Komunikasi",
+        "fakultas": "FISIPOL",
+        "divisi": "DDD",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Faaza Fadhlurrahman",
+        "name": "Faaza",
+        "gender": "Laki-laki",
+        "prodi": "Akuntansi",
+        "fakultas": "Ekonomika dan Bisnis",
+        "divisi": "Bendahara",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Govan Dwi Aditya",
+        "name": "Govan",
+        "gender": "Laki-laki",
+        "prodi": "Teknologi Rekayasa Perangkat Lunak",
+        "fakultas": "Sekolah Vokasi",
+        "divisi": "Sekretaris",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "I Made Krishnaya Ananda",
+        "name": "Krishna",
+        "gender": "Laki-laki",
+        "prodi": "Teknik Mesin",
+        "fakultas": "Teknik",
+        "divisi": "Logistik",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Naila Edgina",
+        "name": "Naila/Ila",
+        "gender": "Perempuan",
+        "prodi": "Hukum",
+        "fakultas": "Hukum",
+        "divisi": "DDD",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Siti Fadilah Noviyanti",
+        "name": "Novi",
+        "gender": "Perempuan",
+        "prodi": "Gizi",
+        "fakultas": "KKMK",
+        "divisi": "Sponsorship",
+        "klaster": "MEDIKA"
+      },
+      {
+        "fullName": "Theova Jevzeva Ischak",
+        "name": "Theo",
+        "gender": "Laki-laki",
+        "prodi": "Akuntansi",
+        "fakultas": "Ekonomika dan Bisnis",
+        "divisi": "Bendahara",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Valentine Yuwazama",
+        "name": "Valen",
+        "gender": "Perempuan",
+        "prodi": "Teknologi Pangan dan Hasil Pertanian",
+        "fakultas": "Teknologi Pertanian",
+        "divisi": "Kormater",
+        "klaster": "AGRO"
+      }
+    ]
+  },
+  {
+    "id": "legokjawa",
+    "name": "Legokjawa",
+    "members": [
+      {
+        "fullName": "Aini Qalbi Lathifa",
+        "name": "Aini",
+        "gender": "Perempuan",
+        "prodi": "Teknik Kimia",
+        "fakultas": "Teknik",
+        "divisi": "Logistik",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Aurell Putri Maharani",
+        "name": "Aurel",
+        "gender": "Perempuan",
+        "prodi": "Teknologi Survei dan Pemetaan Dasar",
+        "fakultas": "Vokasi",
+        "divisi": "Humpub",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Deandra Serenova",
+        "name": "Deandra",
+        "gender": "Perempuan",
+        "prodi": "Geofisika",
+        "fakultas": "MIPA",
+        "divisi": "DDD",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Dina Purnamaningtyas",
+        "name": "Dina",
+        "gender": "Perempuan",
+        "prodi": "Ilmu Tanah",
+        "fakultas": "Pertanian",
+        "divisi": "Humpub",
+        "klaster": "AGRO"
+      },
+      {
+        "fullName": "Fathiya Azizi",
+        "name": "Fathiya",
+        "gender": "Perempuan",
+        "prodi": "Teknik Kimia",
+        "fakultas": "Teknik",
+        "divisi": "Sponsorship",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "I Gusti Lanang Rado Prayata Astina",
+        "name": "Rado",
+        "gender": "Laki-laki",
+        "prodi": "Teknik Nuklir",
+        "fakultas": "Teknik",
+        "divisi": "Kormasit",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Mu’ammar Ihza Syadi",
+        "name": "Ammar",
+        "gender": "Laki-laki",
+        "prodi": "Teknik Nuklir",
+        "fakultas": "Teknik",
+        "divisi": "Kormanit",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Nabilah Qonitah",
+        "name": "Bila",
+        "gender": "Perempuan",
+        "prodi": "Farmasi",
+        "fakultas": "Farmasi",
+        "divisi": "Humpub",
+        "klaster": "MEDIKA"
+      },
+      {
+        "fullName": "Ni Made Ayu Suciati",
+        "name": "Ayu",
+        "gender": "Perempuan",
+        "prodi": "Hubungan Internasional",
+        "fakultas": "FISIPOL",
+        "divisi": "Sponsorship",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Pertiwi Zumi Maghfiroh",
+        "name": "Tiwi",
+        "gender": "Perempuan",
+        "prodi": "Teknik Geologi",
+        "fakultas": "Teknik",
+        "divisi": "Humpub",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Yuandito Dustin Alriscki",
+        "name": "Dito",
+        "gender": "Laki-laki",
+        "prodi": "Teknik Infrastruktur Lingkungan",
+        "fakultas": "Teknik",
+        "divisi": "Logistik",
+        "klaster": "SAINTEK"
+      }
+    ]
+  },
+  {
+    "id": "masawah",
+    "name": "Masawah",
+    "members": [
+      {
+        "fullName": "Alysia El Zahrani",
+        "name": "Al/El",
+        "gender": "Perempuan",
+        "prodi": "Hukum",
+        "fakultas": "Hukum",
+        "divisi": "Kormasit",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Dinda Calista Khairunnisa",
+        "name": "Dinda",
+        "gender": "Perempuan",
+        "prodi": "Manajemen dan Kebijakan Publik",
+        "fakultas": "FISIPOL",
+        "divisi": "Humpub",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Fega Achillea Maydena",
+        "name": "Fega",
+        "gender": "Perempuan",
+        "prodi": "Bahasa, Sastra, dan Budaya Jawa",
+        "fakultas": "Ilmu Budaya",
+        "divisi": "Sekretaris",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Karina Sholihah",
+        "name": "Karina",
+        "gender": "Perempuan",
+        "prodi": "Manajemen dan Kebijakan Publik",
+        "fakultas": "FISIPOL",
+        "divisi": "Sponsorship",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Najwa Aulya Rahmadhani",
+        "name": "Najwa",
+        "gender": "Perempuan",
+        "prodi": "Teknologi Hasil Perikanan",
+        "fakultas": "Pertanian",
+        "divisi": "Logistik",
+        "klaster": "AGRO"
+      },
+      {
+        "fullName": "Nayla Dwiputri Adelis",
+        "name": "Nayla",
+        "gender": "Perempuan",
+        "prodi": "Biologi",
+        "fakultas": "Biologi",
+        "divisi": "DDD",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Rafli Jati Willano",
+        "name": "Willi",
+        "gender": "Laki-laki",
+        "prodi": "Filsafat",
+        "fakultas": "Filsafat",
+        "divisi": "Logistik",
+        "klaster": "SOSHUM"
+      },
+      {
+        "fullName": "Rizki Nurhidayat",
+        "name": "Rizki",
+        "gender": "Laki-laki",
+        "prodi": "Teknik Sipil",
+        "fakultas": "Teknik",
+        "divisi": "DDD",
+        "klaster": "SAINTEK"
+      },
+      {
+        "fullName": "Tia Okta Ramadhani",
+        "name": "Tya",
+        "gender": "Perempuan",
+        "prodi": "Farmasi",
+        "fakultas": "Farmasi",
+        "divisi": "Humpub",
+        "klaster": "MEDIKA"
+      }
+    ]
+  }
+]

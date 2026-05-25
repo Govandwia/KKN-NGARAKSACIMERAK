@@ -1,0 +1,305 @@
+{
+  "inter": [
+    {
+      "name": "Rangkaian Sosialisasi Diversifikasi Pangan",
+      "programs": [
+        {
+          "name": "Diversifikasi Pangan",
+          "pic": "Willy",
+          "description": "Program ini bertujuan untuk memperkenalkan berbagai alternatif sumber pangan lokal yang belum banyak dimanfaatkan oleh masyarakat. Melalui serangkaian kegiatan edukatif dan demonstrasi memasak, warga diajak untuk mengenal potensi bahan pangan yang tersedia di sekitar mereka, sehingga ketergantungan terhadap satu jenis makanan pokok dapat dikurangi secara bertahap."
+        },
+        {
+          "name": "Screening Anemia dan Antopometri",
+          "pic": "Novi",
+          "description": "Kegiatan ini melibatkan pemeriksaan kadar hemoglobin dan pengukuran antropometri pada kelompok rentan seperti ibu hamil, balita, dan remaja putri. Data yang terkumpul akan digunakan sebagai dasar intervensi gizi yang tepat sasaran, sekaligus meningkatkan kesadaran masyarakat tentang pentingnya deteksi dini anemia."
+        },
+        {
+          "name": "Edukasi Kemasan",
+          "pic": "Valen",
+          "description": "Program edukasi kemasan dirancang untuk meningkatkan daya jual produk olahan pangan lokal melalui pengemasan yang menarik dan higienis. Peserta akan diajarkan prinsip-prinsip desain kemasan, pemilihan material yang tepat, serta pentingnya informasi label produk sesuai standar yang berlaku."
+        },
+        {
+          "name": "Pengolahan Ikan Menjadi Bakso",
+          "pic": "Najwa",
+          "description": "Melalui pelatihan praktis, masyarakat diajak untuk mengolah hasil tangkapan ikan menjadi produk bakso ikan yang bernilai ekonomi tinggi. Program ini mencakup teknik pengolahan, penyimpanan, hingga strategi pemasaran sederhana agar produk dapat dipasarkan secara lebih luas."
+        }
+      ]
+    },
+    {
+      "name": "Rangkaian Program Peningkatan Pemanfaatan Komoditas Lokal",
+      "programs": [
+        {
+          "name": "Mesin Bracket Nira",
+          "pic": "Khrisna, Fathiya",
+          "description": "Inovasi teknologi tepat guna berupa mesin bracket nira yang dirancang untuk meningkatkan efisiensi proses penyadapan nira kelapa. Alat ini diharapkan mampu memangkas waktu dan tenaga yang diperlukan oleh petani, sekaligus meningkatkan kuantitas dan kualitas nira yang dihasilkan."
+        },
+        {
+          "name": "Saponifikasi",
+          "pic": "Aini",
+          "description": "Program pembuatan sabun melalui proses saponifikasi menggunakan minyak kelapa sebagai bahan dasar utama. Masyarakat diajarkan cara membuat sabun yang aman dan ramah lingkungan, sehingga dapat digunakan sendiri maupun dijual sebagai produk UMKM bernilai tambah."
+        },
+        {
+          "name": "POC",
+          "pic": "Nayla",
+          "description": "Pembuatan Pupuk Organik Cair (POC) dari limbah pertanian dan rumah tangga yang selama ini tidak termanfaatkan. Program ini bertujuan mengurangi ketergantungan petani terhadap pupuk kimia sintetis, sekaligus mengajarkan prinsip pertanian berkelanjutan."
+        },
+        {
+          "name": "Pembuatan Cocopeat sebagai Media Penanaman TOGA",
+          "pic": "Dina",
+          "description": "Pemanfaatan sabut kelapa menjadi cocopeat sebagai media tanam Tanaman Obat Keluarga (TOGA). Masyarakat diajak untuk mengelola kebun TOGA dengan media tanam yang mudah didapat dan ramah lingkungan, sehingga akses terhadap tanaman obat tradisional semakin terjangkau."
+        },
+        {
+          "name": "Agroforestry (Carbon Credit) dengan Pemanfaatan POC dan Cocopeat",
+          "pic": "Amal",
+          "description": "Program agroforestry yang mengintegrasikan penanaman pohon dengan sistem pertanian yang sudah ada. Penerapan konsep carbon credit diperkenalkan untuk membuka peluang pendapatan tambahan bagi petani melalui mekanisme kompensasi karbon dalam skema keberlanjutan."
+        },
+        {
+          "name": "Sosialisasi Bahaya Swamedikasi",
+          "pic": "Bila",
+          "description": "Kegiatan edukasi kepada masyarakat tentang risiko pengobatan sendiri tanpa konsultasi tenaga medis. Topik yang dibahas meliputi bahaya resistensi obat, efek samping yang tidak terduga, serta pentingnya memanfaatkan fasilitas kesehatan yang tersedia di wilayah setempat."
+        },
+        {
+          "name": "Pembuatan Jamu dari Nira dan TOGA",
+          "pic": "",
+          "description": "Kolaborasi antara pemanfaatan nira kelapa dan tanaman obat keluarga untuk menghasilkan produk jamu tradisional. Program ini menggabungkan kearifan lokal dengan teknik pengolahan modern agar produk jamu yang dihasilkan memiliki kualitas dan daya simpan yang lebih baik."
+        }
+      ]
+    },
+    {
+      "name": "Rangkaian Program dalam Rangka Peringatan Hari Anak",
+      "programs": [
+        {
+          "name": "Ecobrick + Cat",
+          "pic": "Rado",
+          "description": "Anak-anak diajak untuk membuat ecobrick dari botol plastik bekas yang diisi padat dengan sampah plastik lunak, kemudian dihias dengan cat warna-warni. Kegiatan ini bertujuan menanamkan kesadaran lingkungan sejak dini melalui pendekatan yang menyenangkan dan kreatif."
+        },
+        {
+          "name": "Pembuatan Plang Jenis-Jenis Sampah",
+          "pic": "Dito",
+          "description": "Pembuatan dan pemasangan plang informasi tentang jenis-jenis sampah di titik-titik strategis. Plang ini dirancang dengan desain yang informatif dan mudah dipahami agar masyarakat terbiasa memilah sampah sesuai jenisnya secara mandiri."
+        },
+        {
+          "name": "Penyuluhan Waste Management",
+          "pic": "Ayu",
+          "description": "Sosialisasi pengelolaan sampah terpadu mulai dari pengurangan, pemilahan, pengolahan, hingga pembuangan akhir yang bertanggung jawab. Materi disampaikan secara interaktif dengan melibatkan contoh nyata dari lingkungan sekitar masyarakat."
+        },
+        {
+          "name": "Ajar Bahasa Inggris",
+          "pic": "Fega",
+          "description": "Program pengajaran bahasa Inggris dasar untuk anak-anak usia sekolah melalui metode pembelajaran yang interaktif dan menyenangkan. Menggunakan permainan, lagu, dan aktivitas kelompok untuk membangun kepercayaan diri siswa dalam berkomunikasi."
+        },
+        {
+          "name": "Festival Kaulinan Lembur",
+          "pic": "Amel",
+          "description": "Festival permainan tradisional Sunda yang menghadirkan berbagai jenis kaulinan lembur seperti galah asin, bebentengan, dan congklak. Acara ini bertujuan melestarikan budaya lokal sekaligus mempererat tali persaudaraan antar anak-anak di desa."
+        },
+        {
+          "name": "Sekolah Gemar Makan Ikan",
+          "pic": "Najwa",
+          "description": "Kampanye edukasi tentang pentingnya konsumsi ikan bagi tumbuh kembang anak yang dilaksanakan di sekolah-sekolah dasar. Kegiatan ini mencakup penyuluhan gizi, demo masak ikan yang menarik, serta pembagian menu olahan ikan yang disukai anak-anak."
+        },
+        {
+          "name": "PHBS (Pola Hidup Bersih dan Sehat)",
+          "pic": "Tia",
+          "description": "Edukasi tentang pola hidup bersih dan sehat yang mencakup kebiasaan mencuci tangan, menjaga kebersihan lingkungan, mengonsumsi makanan bergizi, dan aktivitas fisik rutin. Ditargetkan untuk siswa sekolah dasar dengan pendekatan yang interaktif dan mudah diingat."
+        }
+      ]
+    },
+    {
+      "name": "Rangkaian Program Pengolahan Sampah Anorganik",
+      "programs": [
+        {
+          "name": "Insinerator",
+          "pic": "Rado, Khrisna",
+          "description": "Perancangan dan pembangunan insinerator sederhana yang ramah lingkungan untuk mengolah sampah anorganik yang tidak bisa didaur ulang. Teknologi ini dilengkapi filter untuk meminimalisir emisi gas berbahaya dan menghasilkan abu yang aman bagi lingkungan."
+        },
+        {
+          "name": "Trash Walk (Jalan Sehat)",
+          "pic": "Ayu",
+          "description": "Kegiatan jalan sehat yang dikombinasikan dengan aktivitas memungut sampah di sepanjang rute yang dilalui. Program ini mengajak seluruh elemen masyarakat untuk berpartisipasi aktif dalam menjaga kebersihan lingkungan desa secara bersama-sama."
+        },
+        {
+          "name": "Rodentisida",
+          "pic": "Dina",
+          "description": "Pembuatan rodentisida organik dari bahan-bahan alami yang aman bagi lingkungan untuk mengendalikan populasi tikus di area pertanian. Program ini juga mencakup edukasi tentang pengelolaan hama secara terpadu tanpa merusak ekosistem."
+        },
+        {
+          "name": "Penyuluhan Penyakit Endemik Menular Leptospirosis",
+          "pic": "Bila",
+          "description": "Sosialisasi tentang bahaya penyakit leptospirosis yang ditularkan melalui air atau tanah yang terkontaminasi urin hewan pengerat. Masyarakat diedukasi mengenai gejala, pencegahan, serta langkah pertolongan pertama yang perlu dilakukan."
+        }
+      ]
+    },
+    {
+      "name": "Rangkaian Program Edukasi Pencegahan dan Penanganan Bencana Alam",
+      "programs": [
+        {
+          "name": "Pemetaan Daerah Rawan Bencana",
+          "pic": "Aurel, Tiwi",
+          "description": "Pembuatan peta rawan bencana yang mencakup identifikasi wilayah-wilayah dengan potensi longsor, banjir, gempa bumi, dan tsunami. Data diambil dari survei lapangan dan sumber ilmiah terkini untuk menghasilkan peta yang akurat dan bermanfaat bagi kesiapsiagaan masyarakat."
+        },
+        {
+          "name": "Pemasangan Plang dan Poster Rawan Bencana",
+          "pic": "Rizki, Dea",
+          "description": "Pemasangan media informasi berupa plang dan poster peringatan bencana di lokasi-lokasi strategis seperti titik kumpul evakuasi dan jalur evakuasi. Desain dibuat dengan bahasa yang sederhana dan visual yang jelas agar mudah dipahami seluruh kalangan."
+        },
+        {
+          "name": "Simulasi Penanganan Gempa",
+          "pic": "Karina",
+          "description": "Pelaksanaan simulasi evakuasi gempa bumi yang melibatkan warga desa, siswa sekolah, dan perangkat desa. Peserta diajarkan teknik berlindung yang benar, jalur evakuasi yang aman, serta prosedur komunikasi darurat saat bencana terjadi."
+        },
+        {
+          "name": "Penjagaan Harta saat Bencana",
+          "pic": "Faaza",
+          "description": "Edukasi tentang strategi pengamanan dokumen penting dan aset berharga saat terjadi bencana alam. Materi mencakup pembuatan tas siaga bencana, penyimpanan dokumen secara digital, serta langkah-langkah prioritas penyelamatan yang harus dilakukan."
+        },
+        {
+          "name": "Pengenalan Kotak P3K",
+          "pic": "Novi",
+          "description": "Pengenalan isi dan fungsi masing-masing komponen kotak P3K kepada masyarakat, disertai pelatihan pertolongan pertama pada kecelakaan dasar. Setiap rumah diharapkan memiliki kotak P3K yang lengkap dan mengetahui cara menggunakannya dengan benar."
+        }
+      ]
+    },
+    {
+      "name": "Rangkaian Sosialisasi Kualitas Air dan Sanitasi serta Preliminary Survei Analisis Daerah Resapan Air Tanah",
+      "programs": [
+        {
+          "name": "Pemetaan Kualitas Air",
+          "pic": "Tiwi",
+          "description": "Survei dan analisis kualitas air di berbagai sumber air yang digunakan masyarakat sehari-hari. Parameter yang diukur meliputi pH, kekeruhan, kandungan mineral, serta kemungkinan kontaminasi bakteri untuk memastikan kelayakan air bagi konsumsi."
+        },
+        {
+          "name": "Sedimentasi dan Koagulasi menjadi Air Bersih Layak Konsumsi",
+          "pic": "Aini",
+          "description": "Demonstrasi dan pelatihan teknik penjernihan air sederhana menggunakan metode sedimentasi dan koagulasi. Bahan koagulan yang mudah didapat diperkenalkan kepada masyarakat agar mereka dapat memproduksi air bersih secara mandiri."
+        },
+        {
+          "name": "Aplikasi Filtrasi Air Sederhana",
+          "pic": "Fathiya",
+          "description": "Pembuatan alat filtrasi air sederhana dari material yang tersedia di lingkungan sekitar seperti pasir, kerikil, dan arang aktif. Alat ini dirancang agar mudah dibuat ulang oleh masyarakat dan efektif menyaring partikel serta kontaminan dari air."
+        },
+        {
+          "name": "Pengenalan Kualitas Air yang Baik dan Demo Oralit",
+          "pic": "Tia",
+          "description": "Edukasi tentang ciri-ciri air bersih yang layak konsumsi serta demonstrasi pembuatan larutan oralit sebagai pertolongan pertama pada kasus diare. Masyarakat diajarkan cara membedakan air yang aman dan tidak aman untuk diminum."
+        }
+      ]
+    },
+    {
+      "name": "Pemberdayaan Ekonomi Lokal guna Memperkuat UMKM",
+      "programs": [
+        {
+          "name": "Optimalisasi UMKM (Branding)",
+          "pic": "Belva",
+          "description": "Pendampingan pelaku UMKM dalam membangun identitas merek yang kuat dan konsisten. Program ini mencakup pembuatan logo, desain kemasan, strategi pemasaran digital, serta pemanfaatan media sosial untuk memperluas jangkauan pasar produk lokal."
+        },
+        {
+          "name": "Penetapan Harga Pokok dan Pencatatan Keuangan bagi Pelaku Usaha",
+          "pic": "Faaza",
+          "description": "Pelatihan manajemen keuangan dasar bagi pelaku UMKM yang mencakup perhitungan harga pokok produksi, pencatatan pemasukan dan pengeluaran, serta pembuatan laporan keuangan sederhana untuk menunjang keberlanjutan usaha."
+        },
+        {
+          "name": "Pendataan UMKM di Gmaps",
+          "pic": "Aurel",
+          "description": "Pendataan dan pendaftaran seluruh UMKM di wilayah pengabdian ke dalam platform Google Maps agar usaha mereka lebih mudah ditemukan oleh calon pembeli. Program ini juga mencakup pelatihan pengelolaan profil bisnis digital secara mandiri."
+        },
+        {
+          "name": "UMKM Pangan (Branding Produk)",
+          "pic": "Valen",
+          "description": "Fokus pada peningkatan branding dan pemasaran produk pangan olahan lokal. Pelaku usaha pangan dibimbing dalam mengembangkan kemasan yang menarik, menyusun deskripsi produk yang persuasif, serta memanfaatkan marketplace untuk penjualan online."
+        }
+      ]
+    }
+  ],
+  "mono": [
+    {
+      "name": "Soshum",
+      "programs": [
+        {
+          "name": "Inventarisasi Budaya",
+          "pic": "Fega",
+          "description": "Pendokumentasian dan inventarisasi kekayaan budaya lokal yang meliputi kesenian, tradisi, bahasa, serta cerita rakyat. Data yang terkumpul disusun dalam bentuk katalog digital untuk pelestarian warisan budaya tak benda masyarakat Cimerak."
+        },
+        {
+          "name": "Lapak Baca",
+          "pic": "Amelia",
+          "description": "Pembentukan pojok baca atau perpustakaan mini di lokasi yang mudah dijangkau oleh anak-anak dan masyarakat. Lapak baca dilengkapi dengan koleksi buku bacaan yang beragam untuk menumbuhkan minat baca dan budaya literasi di kalangan masyarakat desa."
+        },
+        {
+          "name": "Pathways Setelah Sekolah",
+          "pic": "Karina, Theo, Willy, Ayu",
+          "description": "Program bimbingan dan konsultasi jalur karier bagi siswa SMP dan SMA yang mencakup pengenalan berbagai pilihan pendidikan tinggi, peluang beasiswa, serta keterampilan vokasional. Bertujuan memperluas wawasan generasi muda tentang masa depan mereka."
+        },
+        {
+          "name": "Edukasi Hukum Perkawinan Islam dan Masa Depan Generasi",
+          "pic": "Alysia",
+          "description": "Sosialisasi tentang aspek hukum perkawinan dalam Islam, termasuk usia minimal menikah, hak dan kewajiban suami istri, serta dampak pernikahan dini terhadap kesehatan dan pendidikan generasi mendatang."
+        },
+        {
+          "name": "Penguatan Tata Kelola dan Sadar Hukum Pariwisata Desa Berkelanjutan",
+          "pic": "Alysia",
+          "description": "Edukasi kepada perangkat desa dan pelaku pariwisata tentang regulasi dan tata kelola pariwisata yang berkelanjutan. Materi mencakup perizinan, pengelolaan lingkungan, serta pembagian manfaat yang adil bagi masyarakat lokal."
+        },
+        {
+          "name": "Konsumen Cerdas Digital",
+          "pic": "Naila",
+          "description": "Pelatihan literasi digital bagi masyarakat agar menjadi konsumen yang cerdas dalam bertransaksi secara online. Topik yang dibahas meliputi cara mengenali penipuan digital, memahami hak konsumen, serta tips berbelanja yang aman di marketplace."
+        },
+        {
+          "name": "Bahaya Judi Online dan Kejahatan Siber di Era Digital",
+          "pic": "Naila",
+          "description": "Penyuluhan tentang dampak negatif judi online dan berbagai bentuk kejahatan siber yang marak di masyarakat. Materi disampaikan dengan contoh kasus nyata serta tips praktis untuk melindungi diri dan keluarga dari ancaman digital."
+        },
+        {
+          "name": "Cuan dari Rumah",
+          "pic": "Theo",
+          "description": "Pelatihan kewirausahaan digital yang mengajarkan masyarakat cara memulai dan mengembangkan usaha dari rumah. Peserta dibekali keterampilan pemanfaatan platform digital seperti e-commerce, media sosial, dan aplikasi produktivitas."
+        },
+        {
+          "name": "Cimerak on Zine",
+          "pic": "Dinda",
+          "description": "Pembuatan majalah mini (zine) yang mendokumentasikan potensi wisata, budaya, dan kehidupan sehari-hari masyarakat Cimerak. Zine ini menjadi media kreatif untuk mempromosikan desa sekaligus menjadi kenang-kenangan dari kegiatan KKN."
+        },
+        {
+          "name": "Pemetaan Potensi Wisata + Policy Brief",
+          "pic": "Dinda",
+          "description": "Pemetaan menyeluruh terhadap potensi wisata yang dimiliki wilayah Cimerak, dilengkapi dengan penyusunan policy brief sebagai rekomendasi kebijakan bagi pemerintah desa dalam mengembangkan sektor pariwisata secara terencana dan berkelanjutan."
+        }
+      ]
+    },
+    {
+      "name": "Medika",
+      "programs": [
+        {
+          "name": "Skrining TBC",
+          "pic": "Novi",
+          "description": "Pelaksanaan skrining tuberkulosis pada masyarakat melalui pemeriksaan gejala klinis dan pengambilan sampel dahak. Program ini bertujuan mendeteksi kasus TBC secara dini agar penanganan dapat dilakukan segera dan rantai penularan dapat diputus."
+        },
+        {
+          "name": "Donor Darah PMI",
+          "pic": "Bila, Tia",
+          "description": "Penyelenggaraan kegiatan donor darah bekerja sama dengan Palang Merah Indonesia (PMI) untuk menambah stok darah di bank darah daerah. Kegiatan ini juga mencakup edukasi tentang pentingnya donor darah rutin dan syarat-syarat menjadi pendonor."
+        }
+      ]
+    },
+    {
+      "name": "Agro",
+      "programs": []
+    },
+    {
+      "name": "Saintek",
+      "programs": [
+        {
+          "name": "Pengenalan Coding",
+          "pic": "Govan",
+          "description": "Program pengenalan dasar pemrograman komputer untuk siswa SMP melalui platform visual yang interaktif. Peserta diajarkan konsep logika pemrograman, pemecahan masalah, dan kreativitas digital melalui pembuatan proyek-proyek sederhana yang menyenangkan."
+        },
+        {
+          "name": "Pembuatan Website",
+          "pic": "Govan",
+          "description": "Pembuatan website profil desa yang informatif dan menarik sebagai sarana promosi potensi desa kepada dunia luar. Website ini dirancang agar mudah dikelola oleh perangkat desa secara mandiri setelah masa KKN berakhir."
+        }
+      ]
+    }
+  ]
+}
