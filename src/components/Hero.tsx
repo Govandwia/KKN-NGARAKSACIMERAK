@@ -9,9 +9,17 @@ import { collection, query, orderBy, limit, getDocs } from "firebase/firestore";
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [articleLoaded, setArticleLoaded] = useState(false);
+  const [articleFetched, setArticleFetched] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [latestArticle, setLatestArticle] = useState<any>(null);
+
+  useEffect(() => {
+    if (videoLoaded && (articleLoaded || (articleFetched && !latestArticle?.image))) {
+      window.dispatchEvent(new Event("heroMediaLoaded"));
+    }
+  }, [videoLoaded, articleLoaded, articleFetched, latestArticle]);
 
   useEffect(() => {
     const fetchLatestArticle = async () => {
@@ -24,6 +32,8 @@ export default function Hero() {
         }
       } catch (error) {
         console.error("Error fetching latest article:", error);
+      } finally {
+        setArticleFetched(true);
       }
     };
 
@@ -33,6 +43,10 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
+    if (video.readyState >= 3) {
+      setVideoLoaded(true);
+    }
 
     const handleTimeUpdate = () => {
       // Jika tersisa kurang dari 0.5 detik, mulai fade out
@@ -59,8 +73,8 @@ export default function Hero() {
           loop
           muted
           playsInline
-          onCanPlay={() => setIsLoaded(true)}
-          className={`object-cover object-center w-full h-full transition-opacity duration-500 ease-in-out ${isLoaded && !isFadingOut ? 'opacity-100 dark:opacity-80' : 'opacity-0'}`}
+          onCanPlay={() => setVideoLoaded(true)}
+          className={`object-cover object-center w-full h-full transition-opacity duration-500 ease-in-out ${videoLoaded && !isFadingOut ? 'opacity-100 dark:opacity-80' : 'opacity-0'}`}
         />
         {/* Subtle gradient overlay to ensure text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent dark:from-black/90 dark:via-black/50 dark:to-transparent transition-colors duration-500 pointer-events-none"></div>
@@ -110,6 +124,9 @@ export default function Hero() {
                       alt={latestArticle.title}
                       fill
                       className="object-cover"
+                      priority
+                      onLoad={() => setArticleLoaded(true)}
+                      onError={() => setArticleLoaded(true)}
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                         <h4 className="text-white font-sans font-bold text-lg leading-tight line-clamp-2">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 // Using the 6 colors from the palette
 const colors = ['#EB9365', '#F6E769', '#CCF7C9', '#AEE3EF', '#FBA0A0', '#504702'];
@@ -11,12 +11,19 @@ export default function Preloader() {
   const [colorIndex, setColorIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(true);
+  const isMediaReady = useRef(false);
 
   useEffect(() => {
     // Hide scrollbar on body while loading
     document.body.style.overflow = "hidden";
     setMounted(true);
     let current = 0;
+    
+    const handleMediaReady = () => {
+      isMediaReady.current = true;
+    };
+    
+    window.addEventListener("heroMediaLoaded", handleMediaReady);
     
     // Rapidly cycle colors during load
     const colorInterval = setInterval(() => {
@@ -25,7 +32,13 @@ export default function Preloader() {
 
     // Increment progress
     const progressInterval = setInterval(() => {
+      const limit = isMediaReady.current ? 100 : 90;
+      
       current += Math.floor(Math.random() * 12) + 2;
+      
+      if (current >= limit && !isMediaReady.current) {
+        current = limit;
+      }
       
       if (current >= 100) {
         current = 100;
@@ -53,6 +66,7 @@ export default function Preloader() {
     return () => {
       clearInterval(progressInterval);
       clearInterval(colorInterval);
+      window.removeEventListener("heroMediaLoaded", handleMediaReady);
       document.body.style.overflow = "auto";
     };
   }, []);
