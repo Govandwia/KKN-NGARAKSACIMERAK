@@ -35,7 +35,7 @@ export default function About() {
              
              <div className="text-zinc-600 dark:text-zinc-400 font-sans text-sm md:text-base leading-relaxed space-y-6 max-w-lg md:pl-8 border-l border-transparent md:border-black/10 md:dark:border-white/10">
                 <p>
-                  Kami adalah tim KKN-PPM UGM Unit JB-015 Tahun 2026 yang memiliki satu tekad kuat: berbakti untuk negeri melalui pengabdian nyata di Kecamatan Cimerak, Pangandaran.
+                  Kami adalah tim KKN-PPM UGM Tim Ngaraksa Cimerak Tahun 2026 yang memiliki satu tekad kuat: berbakti untuk negeri melalui pengabdian nyata di Kecamatan Cimerak, Pangandaran.
                 </p>
                 <p>
                   Desa Masawah, Legokjawa, dan Batumalang menyimpan segudang potensi. Namun ada tantangan berupa minimnya diversifikasi pangan dan pengelolaan limbah.

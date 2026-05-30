@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { MapPin } from "lucide-react";
 import { villages } from "../data/villages";
 
 export default function Location() {
@@ -111,11 +112,11 @@ export default function Location() {
             </div>
 
             {/* Daftar Desa Scrollable (Bawah) */}
-            <div className="flex-1 flex flex-col relative bg-white dark:bg-[#1a1a1a]">
+            <div className="flex-1 flex flex-col relative bg-white dark:bg-[#1a1a1a] min-h-0">
               <div className="absolute top-4 left-4 w-1.5 h-1.5 bg-[#EB9365]"></div>
-              <h4 className="text-xs font-bold font-serif text-zinc-400 uppercase tracking-widest mb-4 px-8 pt-6">Daftar Desa (11)</h4>
+              <h4 className="text-xs font-bold font-serif text-zinc-400 uppercase tracking-widest mb-4 px-8 pt-6">Daftar Desa ({villages.length})</h4>
               
-              <div className="flex flex-col overflow-y-auto max-h-[350px] custom-scrollbar border-t border-black/10 dark:border-white/10">
+              <div className="flex-1 flex flex-col overflow-y-auto custom-scrollbar border-t border-black/10 dark:border-white/10">
                 {villages.map((v, i) => (
                   <button
                     key={v.id}
@@ -127,8 +128,11 @@ export default function Location() {
                         ? 'bg-zinc-100 dark:bg-white/10' 
                         : (hoveredVillage === i ? 'bg-zinc-50 dark:bg-white/5' : 'bg-transparent')}`}
                   >
-                    <span className={`font-normal font-serif text-lg md:text-xl transition-colors ${activeVillage === i ? v.color : 'text-zinc-600 dark:text-zinc-400'}`}>
+                    <span className={`font-normal font-serif text-lg md:text-xl flex items-center gap-2 transition-colors ${activeVillage === i ? v.color : 'text-zinc-600 dark:text-zinc-400'}`}>
                       {v.name}
+                      {['masawah', 'legokjawa', 'batumalang'].includes(v.id) && (
+                        <MapPin size={16} className="text-[#EB9365] shrink-0" />
+                      )}
                     </span>
                     
                     {/* Indikator Aktif */}

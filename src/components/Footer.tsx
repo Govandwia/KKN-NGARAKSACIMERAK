@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="font-serif text-xl md:text-2xl font-bold tracking-wider uppercase mb-6">Ngaraksa Cimerak</h3>
             <p className="text-sm text-white/60 leading-relaxed font-sans mb-8 pr-0 md:pr-12">
-              Tim KKN-PPM UGM Unit JB-015 Tahun 2026 yang berdedikasi untuk pemberdayaan ekonomi, inovasi komoditas lokal, mitigasi bencana, dan pelestarian budaya di Kecamatan Cimerak, Pangandaran.
+              Tim KKN-PPM UGM Tim Ngaraksa Cimerak Tahun 2026 yang berdedikasi untuk pemberdayaan ekonomi, inovasi komoditas lokal, mitigasi bencana, dan pelestarian budaya di Kecamatan Cimerak, Pangandaran.
             </p>
             <div className="flex items-center gap-6 md:gap-8 bg-[#cccccc] py-3 px-6 md:py-4 md:px-8 rounded-full w-max shadow-inner">
               <Image src="/images/logos/logo-ugm.png" alt="Logo UGM" width={200} height={64} className="h-10 md:h-14 w-auto object-contain" />
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         <div className="pt-8 border-t border-white/10 text-center text-white/40 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© 2026 KKN-PPM UGM Ngaraksa Cimerak. All rights reserved.</p>
-          <p>Unit JB-015 • Kecamatan Cimerak, Pangandaran</p>
+          <p>Tim Ngaraksa Cimerak • Kecamatan Cimerak, Pangandaran</p>
         </div>
       </div>
     </footer>

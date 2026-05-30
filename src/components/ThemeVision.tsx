@@ -13,7 +13,7 @@ export default function ThemeVision() {
            </div>
            <div className="md:w-1/3 p-8 md:p-12 border-t md:border-t-0 md:border-l border-black/10 dark:border-white/10 flex items-end">
              <p className="text-zinc-700 dark:text-zinc-300 font-sans leading-relaxed text-sm md:text-base">
-               Tema KKN-PPM UGM Unit JB-015 Tahun 2026 berfokus pada pemberdayaan ekonomi, pelestarian budaya, hingga mitigasi bencana di Kecamatan Cimerak, Kabupaten Pangandaran.
+               Tema KKN-PPM UGM Tim Ngaraksa Cimerak Tahun 2026 berfokus pada pemberdayaan ekonomi, pelestarian budaya, hingga mitigasi bencana di Kecamatan Cimerak, Kabupaten Pangandaran.
              </p>
            </div>
         </div>
