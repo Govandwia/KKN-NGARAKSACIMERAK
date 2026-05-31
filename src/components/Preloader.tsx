@@ -14,9 +14,18 @@ export default function Preloader() {
   const isMediaReady = useRef(false);
 
   useEffect(() => {
+    setMounted(true);
+
+    // Check if user has already seen the splash screen in this session
+    const hasSeenSplash = sessionStorage.getItem("hasSeenSplash");
+    if (hasSeenSplash) {
+      setLoading(false);
+      setVisible(false);
+      return;
+    }
+
     // Hide scrollbar on body while loading
     document.body.style.overflow = "hidden";
-    setMounted(true);
     let current = 0;
     
     const handleMediaReady = () => {
@@ -47,6 +56,7 @@ export default function Preloader() {
         
         // Lock to primary orange at the end
         setColorIndex(0); 
+        sessionStorage.setItem("hasSeenSplash", "true");
         
         // Wait at 100% for a dramatic pause
         setTimeout(() => {
