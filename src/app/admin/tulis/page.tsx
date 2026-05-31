@@ -46,7 +46,7 @@ export default function RedaksiTulis() {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (!currentUser) {
-                router.push("/redaksi/login");
+                router.push("/admin/login");
             } else {
                 setUser(currentUser);
                 setLoadingAuth(false);
@@ -97,7 +97,7 @@ export default function RedaksiTulis() {
             setTitle(""); setExcerpt(""); setContent(""); setImage("");
             
             setTimeout(() => {
-                router.push("/redaksi/dashboard");
+                router.push("/admin/dashboard");
             }, 1500);
 
         } catch (error: any) {
@@ -109,7 +109,7 @@ export default function RedaksiTulis() {
 
     const handleLogout = async () => {
         await signOut(auth);
-        router.push("/redaksi/login");
+        router.push("/admin/login");
     }
 
     if (loadingAuth) {
@@ -122,7 +122,7 @@ export default function RedaksiTulis() {
             <header className="sticky top-0 z-40 w-full border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <Link href="/redaksi/dashboard">
+                        <Link href="/admin/dashboard">
                             <Button variant="ghost" size="icon" title="Kembali ke Dashboard">
                                 <ArrowLeft className="h-5 w-5" />
                             </Button>

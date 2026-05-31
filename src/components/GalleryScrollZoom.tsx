@@ -1,8 +1,11 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+import { fetchImagesFromDriveFolder } from "@/lib/gdrive";
 import { ALL_PHOTOS } from "@/data/gallery";
 import { PixelStar, FlowerStar, AsteriskLines } from "@/components/Decorations";
 
@@ -66,6 +69,47 @@ export function GalleryScrollZoom() {
         offset: ["start start", "end end"]
     });
 
+    const [fetchedPhotos, setFetchedPhotos] = useState<string[]>([]);
+
+    useEffect(() => {
+        const fetchPhotos = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, "galleries"));
+                let photos: string[] = [];
+                for (const document of querySnapshot.docs) {
+                    const data = document.data();
+                    if (data.driveUrl) {
+                        try {
+                            const driveImages = await fetchImagesFromDriveFolder(data.driveUrl);
+                            if (driveImages && driveImages.length > 0) {
+                                driveImages.forEach((img: any) => {
+                                    photos.push(img.url);
+                                });
+                            }
+                        } catch (e) {
+                            console.error(e);
+                        }
+                    }
+                    // Limit to around 80 photos so it doesn't get too slow loading all galleries
+                    if (photos.length >= 80) break; 
+                }
+                
+                // Shuffle array
+                photos = photos.sort(() => Math.random() - 0.5);
+
+                if (photos.length > 0) {
+                    setFetchedPhotos(photos);
+                } else {
+                    setFetchedPhotos(ALL_PHOTOS.map(p => p.images[0]));
+                }
+            } catch (error) {
+                console.error("Error fetching photos for scroll zoom:", error);
+                setFetchedPhotos(ALL_PHOTOS.map(p => p.images[0]));
+            }
+        };
+        fetchPhotos();
+    }, []);
+
     // Move camera forward by 28000 units to clear all 150 images deeper into the Z space
     const zMovement = useTransform(scrollYProgress, [0, 1], [0, 28000]);
 
@@ -123,10 +167,13 @@ export function GalleryScrollZoom() {
 
                                         <div className="w-full h-full relative overflow-hidden bg-zinc-200 border-2 border-black">
                                             <Image
-                                                src={ALL_PHOTOS[typeof obj.id === 'number' ? (Math.abs(obj.id) % ALL_PHOTOS.length) : 0].images[0]}
+                                                src={fetchedPhotos.length > 0 
+                                                    ? fetchedPhotos[typeof obj.id === 'number' ? (Math.abs(obj.id) % fetchedPhotos.length) : 0] 
+                                                    : (ALL_PHOTOS[typeof obj.id === 'number' ? (Math.abs(obj.id) % ALL_PHOTOS.length) : 0]?.images[0] || "/images/placeholder.jpg")
+                                                }
                                                 alt="Gallery Photo"
                                                 fill
-                                                className="object-cover grayscale"
+                                                className="object-cover"
                                                 sizes="(max-width: 768px) 300px, 400px"
                                             />
                                         </div>

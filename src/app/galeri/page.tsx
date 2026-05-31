@@ -2,35 +2,87 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
-import { ArrowUpRight, X, ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowUpRight, X, ChevronLeft, ChevronRight, Download, Loader2 } from "lucide-react";
 
-import { GALLERY_CATEGORIES, ALL_PHOTOS, Category } from "@/data/gallery";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+import { fetchImagesFromDriveFolder } from "@/lib/gdrive";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PixelStar, AsteriskLines } from "@/components/Decorations";
 import { GalleryScrollZoom } from "@/components/GalleryScrollZoom";
 
 export default function GalleryPage() {
-    const [activeCategory, setActiveCategory] = useState<Category>("Semua");
-    const [selectedPhoto, setSelectedPhoto] = useState<(typeof ALL_PHOTOS)[0] | null>(null);
+    const [activeCategory, setActiveCategory] = useState<string>("Semua");
+    const [selectedPhoto, setSelectedPhoto] = useState<any | null>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const POSTS_PER_PAGE = 16;
 
+    const [galleries, setGalleries] = useState<any[]>([]);
+    const [categories, setCategories] = useState<string[]>(["Semua"]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const loadGalleries = async () => {
+            try {
+                const q = query(collection(db, "galleries"), orderBy("createdAt", "desc"));
+                const querySnapshot = await getDocs(q);
+                
+                const fetchedGalleries: any[] = [];
+                const uniqueCategories = new Set<string>();
+                uniqueCategories.add("Semua");
+
+                for (const document of querySnapshot.docs) {
+                    const data = document.data();
+                    const sectionName = data.section || "Umum";
+                    uniqueCategories.add(sectionName); 
+                    
+                    try {
+                        const driveImages = await fetchImagesFromDriveFolder(data.driveUrl);
+                        if (driveImages && driveImages.length > 0) {
+                            // Setiap entri galeri mewakili satu album (dengan satu nama kegiatan)
+                            fetchedGalleries.push({
+                                id: document.id,
+                                category: sectionName,
+                                title: data.name,
+                                description: data.description,
+                                date: data.date || "Jul 2026",
+                                location: data.location || "Cimerak",
+                                thumbnail: data.thumbnailUrl,
+                                images: driveImages.map((img: any) => img.url)
+                            });
+                        }
+                    } catch (err) {
+                        console.error("Gagal load gambar dari drive untuk", data.name, err);
+                    }
+                }
+                setCategories(Array.from(uniqueCategories));
+                setGalleries(fetchedGalleries);
+            } catch (error) {
+                console.error("Error fetching galleries:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        loadGalleries();
+    }, []);
+
     const filteredPhotos = activeCategory === "Semua" 
-        ? ALL_PHOTOS 
-        : ALL_PHOTOS.filter(p => p.category === activeCategory);
+        ? galleries 
+        : galleries.filter(p => p.category === activeCategory);
 
     const totalPages = Math.ceil(filteredPhotos.length / POSTS_PER_PAGE);
     const visiblePhotos = filteredPhotos.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
-    const handleCategoryChange = (cat: Category) => {
+    const handleCategoryChange = (cat: string) => {
         setActiveCategory(cat);
         setCurrentPage(1);
     };
 
-    const openPhoto = (photo: typeof ALL_PHOTOS[0]) => {
+    const openPhoto = (photo: any) => {
         setSelectedPhoto(photo);
         setCurrentImageIndex(0);
         document.body.style.overflow = 'hidden';
@@ -95,7 +147,7 @@ export default function GalleryPage() {
             <div className="container mx-auto px-4 md:px-8 relative z-10 py-16">
                 {/* FILTER TABS - Brutalist Style */}
                 <div className="flex flex-wrap justify-start lg:justify-center gap-3 mb-16">
-                    {GALLERY_CATEGORIES.map((cat) => (
+                    {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => handleCategoryChange(cat)}
@@ -112,7 +164,11 @@ export default function GalleryPage() {
 
                 {/* GALLERY GRID */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12">
-                    {visiblePhotos.length > 0 ? (
+                    {loading ? (
+                        <div className="col-span-full flex justify-center py-32">
+                            <Loader2 className="w-8 h-8 animate-spin text-zinc-400" />
+                        </div>
+                    ) : visiblePhotos.length > 0 ? (
                         visiblePhotos.map((photo, idx) => (
                             <motion.div
                                 key={photo.id}
@@ -133,7 +189,7 @@ export default function GalleryPage() {
                                     {/* Image Area */}
                                     <div className="relative w-full aspect-[4/3] bg-zinc-200 dark:bg-zinc-800 overflow-hidden mb-4 border-2 border-black dark:border-white">
                                         <Image
-                                            src={photo.images[0]}
+                                            src={photo.thumbnail || photo.images[0]}
                                             alt={photo.title}
                                             fill
                                             className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
@@ -298,18 +354,18 @@ export default function GalleryPage() {
                                         <div className="w-full h-1 bg-black/20 dark:bg-white/20 mb-6"></div>
 
                                         <p className="text-black/70 dark:text-white/70 text-sm md:text-base leading-relaxed mb-8 font-sans">
-                                            Ini adalah bagian deskripsi foto. Anda dapat menambahkan cerita atau momen penting yang terjadi di balik tangkapan lensa ini.
+                                            {selectedPhoto.description || "Ini adalah bagian deskripsi foto. Anda dapat menambahkan cerita atau momen penting yang terjadi di balik tangkapan lensa ini."}
                                         </p>
 
                                         {/* Metadata Grid */}
                                         <div className="grid grid-cols-2 gap-y-4 gap-x-4 p-4 border-2 border-black dark:border-white bg-white/50 dark:bg-black/50">
                                             <div>
                                                 <p className="font-mono text-black/50 dark:text-white/50 text-[10px] uppercase mb-1">Tanggal</p>
-                                                <p className="text-black dark:text-white font-bold text-sm">Jul 2026</p>
+                                                <p className="text-black dark:text-white font-bold text-sm">{selectedPhoto.date}</p>
                                             </div>
                                             <div>
                                                 <p className="font-mono text-black/50 dark:text-white/50 text-[10px] uppercase mb-1">Lokasi</p>
-                                                <p className="text-black dark:text-white font-bold text-sm">{selectedPhoto.category !== 'Semua' && selectedPhoto.category !== 'Penerjunan' && selectedPhoto.category !== 'Penarikan' ? selectedPhoto.category : 'Cimerak'}</p>
+                                                <p className="text-black dark:text-white font-bold text-sm">{selectedPhoto.location}</p>
                                             </div>
                                         </div>
                                     </div>

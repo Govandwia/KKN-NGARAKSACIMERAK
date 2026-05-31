@@ -24,7 +24,7 @@ export default function RedaksiLogin() {
 
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            router.push("/redaksi/dashboard");
+            router.push("/admin/dashboard");
         } catch (err: any) {
             setError(err.message || "Gagal masuk. Periksa kembali email dan password Anda.");
         } finally {
@@ -69,7 +69,7 @@ export default function RedaksiLogin() {
                                     required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="redaksi@cimerak.com"
+                                    placeholder="admin@cimerak.com"
                                 />
                             </div>
                             
