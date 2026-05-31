@@ -1,4 +1,5 @@
 import { Fish, Leaf, Users, Recycle, ShieldAlert, Droplets } from "lucide-react";
+import Link from "next/link";
 
 export default function ProgramsPreview() {
   const clusters = [
@@ -62,18 +63,19 @@ export default function ProgramsPreview() {
              </p>
            </div>
            
-           <div className="p-8 md:p-12 md:w-1/3 flex items-center justify-center border-r border-b border-black/10 dark:border-white/10 bg-zinc-50 dark:bg-[#111] hover:bg-[#EB9365] hover:text-white transition-colors group cursor-pointer">
+           <Link href="/program" className="p-8 md:p-12 md:w-1/3 flex items-center justify-center border-r border-b border-black/10 dark:border-white/10 bg-zinc-50 dark:bg-[#111] hover:bg-[#EB9365] hover:text-white transition-colors group cursor-pointer">
              <div className="flex items-center gap-6">
                 <span className="font-sans font-medium text-xl">Lihat Semua</span>
                 <span className="font-mono text-[#EB9365] group-hover:text-white transition-colors text-xl font-light">✽</span>
              </div>
-           </div>
+           </Link>
         </div>
 
         {/* Grid 3x2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-black/10 dark:border-white/10 font-sans">
           {clusters.map((cluster) => (
-            <div 
+            <Link 
+              href={`/program#${cluster.id}`}
               key={cluster.id} 
               className="bg-white dark:bg-black border-r border-b border-black/10 dark:border-white/10 p-8 md:p-12 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors group cursor-pointer relative flex flex-col h-[380px]"
               style={{ '--hover-color': cluster.color } as React.CSSProperties}
@@ -109,7 +111,7 @@ export default function ProgramsPreview() {
                 <span className="font-serif text-zinc-300 dark:text-zinc-700 group-hover:text-[var(--hover-color)] transition-colors text-lg font-light">✽</span>
               </div>
 
-            </div>
+            </Link>
           ))}
         </div>
 

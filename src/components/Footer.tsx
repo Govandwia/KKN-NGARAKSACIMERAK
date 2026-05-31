@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -24,10 +25,11 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="font-bold mb-2 uppercase tracking-widest text-sm text-white/40">Tautan</h4>
             <ul className="flex flex-col gap-3 text-sm font-medium text-white/70">
-              <li className="hover:text-white cursor-pointer transition">Beranda</li>
-              <li className="hover:text-white cursor-pointer transition">Program</li>
-              <li className="hover:text-white cursor-pointer transition">Anggota</li>
-              <li className="hover:text-white cursor-pointer transition">Galeri</li>
+              <li><Link href="/" className="hover:text-white transition block">Beranda</Link></li>
+              <li><Link href="/program" className="hover:text-white transition block">Program</Link></li>
+              <li><Link href="/artikel" className="hover:text-white transition block">Artikel</Link></li>
+              <li><Link href="/anggota" className="hover:text-white transition block">Anggota</Link></li>
+              <li><Link href="/galeri" className="hover:text-white transition block">Galeri</Link></li>
             </ul>
           </div>
 

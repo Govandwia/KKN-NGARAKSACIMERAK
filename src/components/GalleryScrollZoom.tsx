@@ -21,10 +21,10 @@ const ORNAMENTS = ["pixelstar", "flower", "asterisk"];
 const HERO_OBJECTS = Array.from({ length: 150 }).map((_, i) => {
     // 1 in 6 chance to be an ornament
     const isOrnament = i % 6 === 0;
-    
+
     // Spread z from -100 down to roughly -27000
     const z = -100 - (i * 180);
-    
+
     // Deterministic random values for hydration safety
     const rand1 = seededRandom(i * 10 + 1);
     const rand2 = seededRandom(i * 10 + 2);
@@ -34,7 +34,7 @@ const HERO_OBJECTS = Array.from({ length: 150 }).map((_, i) => {
 
     // Use random side rather than even/odd to prevent patterns
     const side = rand5 > 0.5 ? 1 : -1;
-    
+
     const x = Math.round(side * (300 + rand1 * 900));
     const y = Math.round(-800 + rand2 * 1600);
     const rotate = Math.round(-30 + rand3 * 60);
@@ -42,7 +42,7 @@ const HERO_OBJECTS = Array.from({ length: 150 }).map((_, i) => {
     if (isOrnament) {
         // i/6 gives 0, 1, 2, 3... which spreads nicely over the 3 ornaments
         const ornamentIndex = (i / 6) % ORNAMENTS.length;
-        
+
         return {
             id: `or${i}`,
             type: "ornament",
@@ -91,9 +91,9 @@ export function GalleryScrollZoom() {
                         }
                     }
                     // Limit to around 80 photos so it doesn't get too slow loading all galleries
-                    if (photos.length >= 80) break; 
+                    if (photos.length >= 80) break;
                 }
-                
+
                 // Shuffle array
                 photos = photos.sort(() => Math.random() - 0.5);
 
@@ -147,7 +147,7 @@ export function GalleryScrollZoom() {
                     <motion.div
                         style={{
                             transformStyle: "preserve-3d",
-                            z: zMovement, 
+                            z: zMovement,
                         }}
                         className="relative w-full h-full flex items-center justify-center will-change-transform"
                     >
@@ -167,8 +167,8 @@ export function GalleryScrollZoom() {
 
                                         <div className="w-full h-full relative overflow-hidden bg-zinc-200 border-2 border-black">
                                             <Image
-                                                src={fetchedPhotos.length > 0 
-                                                    ? fetchedPhotos[typeof obj.id === 'number' ? (Math.abs(obj.id) % fetchedPhotos.length) : 0] 
+                                                src={fetchedPhotos.length > 0
+                                                    ? fetchedPhotos[typeof obj.id === 'number' ? (Math.abs(obj.id) % fetchedPhotos.length) : 0]
                                                     : (ALL_PHOTOS[typeof obj.id === 'number' ? (Math.abs(obj.id) % ALL_PHOTOS.length) : 0]?.images[0] || "/images/placeholder.jpg")
                                                 }
                                                 alt="Gallery Photo"
@@ -195,7 +195,7 @@ export function GalleryScrollZoom() {
 
                         {/* CENTRAL BADGE (At Z=0) */}
                         <div className="absolute z-50 bg-[#CCF7C9] px-12 py-10 md:px-20 md:py-16 border-4 border-black shadow-[16px_16px_0_0_#000] dark:shadow-[16px_16px_0_0_#EB9365] text-center w-[90%] md:w-auto mx-4 origin-center">
-                            
+
                             <div className="absolute -top-12 -left-10 w-24 h-24 md:w-32 md:h-32">
                                 <FlowerStar className="w-full h-full text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] animate-[spin_20s_linear_infinite]" />
                             </div>
@@ -204,10 +204,10 @@ export function GalleryScrollZoom() {
                             </div>
 
                             <h1 className="text-4xl md:text-7xl font-bold font-sans text-black uppercase tracking-tight">
-                                Lorong <br/> <span className="text-[#EB9365] drop-shadow-[2px_2px_0_#000]">Waktu</span>
+                                Lorong <br /> <span className="text-[#EB9365] drop-shadow-[2px_2px_0_#000]">Waktu</span>
                             </h1>
                             <p className="text-black/80 font-bold text-sm md:text-base tracking-widest uppercase mt-6 border-t-2 border-black/30 pt-4">
-                                Terus Gulir Ke Bawah
+                                Keep Scroll
                             </p>
                         </div>
                     </motion.div>
