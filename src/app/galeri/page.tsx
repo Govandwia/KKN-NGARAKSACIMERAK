@@ -11,6 +11,16 @@ import { fetchImagesFromDriveFolder } from "@/lib/gdrive";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Galeri Kegiatan",
+  description: "Kumpulan foto dokumentasi kegiatan, program kerja, dan keindahan alam Kecamatan Cimerak, Pangandaran.",
+  openGraph: {
+    title: "Galeri KKN Ngaraksa Cimerak",
+    description: "Lihat momen-momen kegiatan KKN-PPM UGM Ngaraksa Cimerak."
+  }
+};
 import { PixelStar, AsteriskLines } from "@/components/Decorations";
 import { GalleryScrollZoom } from "@/components/GalleryScrollZoom";
 

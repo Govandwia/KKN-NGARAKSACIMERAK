@@ -5,6 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, User, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Program Kerja",
+  description: "Rangkaian 6 klaster program kerja multidisiplin KKN-PPM UGM Ngaraksa Cimerak 2026.",
+  openGraph: {
+    title: "Program Kerja | Ngaraksa Cimerak",
+    description: "Pelajari lebih lanjut mengenai program pemberdayaan ekonomi, inovasi, dan mitigasi bencana kami."
+  }
+};
 import programsData from "@/data/programs.json";
 
 const colors = ['#EB9365', '#F6E769', '#CCF7C9', '#AEE3EF', '#FBA0A0', '#504702'];

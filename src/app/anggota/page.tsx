@@ -2,6 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import membersData from "@/data/members.json";
 import { PixelStar, FlowerStar } from "@/components/Decorations";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Anggota Tim",
+  description: "Mengenal lebih dekat 30 individu luar biasa di balik KKN PPM UGM 2026 Ngaraksa Cimerak.",
+  openGraph: {
+    title: "Anggota Tim KKN Ngaraksa Cimerak",
+    description: "Kenalan dengan 30 mahasiswa tangguh yang siap mengabdi di Cimerak."
+  }
+};
 
 const colors = ['#EB9365', '#F6E769', '#CCF7C9', '#AEE3EF', '#FBA0A0', '#504702'];
 
